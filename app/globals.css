@@ -1252,9 +1252,17 @@ p {
   left: 0;
   bottom: 112px;
   width: 148px;
+  height: 62px;
   min-height: 62px;
   padding: 10px;
   border-radius: 16px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 42px;
+  grid-template-rows: auto auto;
+  align-items: center;
+  column-gap: 8px;
+  row-gap: 3px;
+  overflow: hidden;
 }
 .document-stack span,
 .permissions-panel span {
@@ -1269,21 +1277,31 @@ p {
   display: block;
 }
 .document-stack strong {
-  margin: 2px 0 8px;
-  font-size: 0.95rem;
+  margin: 0;
+  font-size: 0.82rem;
   line-height: 1.1;
+  white-space: nowrap;
 }
 .document-stack div {
-  height: 7px;
-  margin-top: 5px;
+  height: 5px;
+  margin-top: 0;
   background: linear-gradient(90deg, #9be4ff66, #9be4ff12);
   border-radius: 999px;
 }
+.document-stack div:nth-child(3) {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: end;
+  width: 100%;
+}
 .document-stack div:nth-child(4) {
-  width: 78%;
+  grid-column: 2;
+  grid-row: 2;
+  align-self: start;
+  width: 76%;
 }
 .document-stack div:nth-child(5) {
-  width: 54%;
+  display: none;
 }
 .permissions-panel {
   top: 14px;

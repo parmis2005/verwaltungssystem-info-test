@@ -1443,6 +1443,9 @@ p {
 .left-heading-section .split-copy {
   max-width: 760px;
 }
+.offer-section .section-heading h2 {
+  max-width: 1040px;
+}
 .practice-heading-section .section-heading {
   grid-template-columns: minmax(0, 1120px);
 }

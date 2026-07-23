@@ -1304,13 +1304,19 @@ p {
   background: #ffc7741c;
   border-radius: 10px;
 }
+.permissions-panel > div {
+  display: grid;
+  gap: 4px;
+}
 .permissions-panel strong {
   font-size: 0.76rem;
   line-height: 1.14;
 }
 .permissions-panel span {
+  display: block;
   font-size: 0.56rem;
   line-height: 1.2;
+  white-space: nowrap;
 }
 .workflow-ribbon {
   left: 38px;

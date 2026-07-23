@@ -1292,25 +1292,26 @@ p {
   padding: 10px;
   border-radius: 16px;
   display: grid;
-  grid-template-columns: 28px minmax(0, 1fr);
+  grid-template-columns: 24px minmax(0, 1fr);
   align-items: center;
-  gap: 8px;
+  gap: 7px;
 }
 .permissions-panel svg {
-  width: 28px;
-  height: 28px;
-  padding: 6px;
+  width: 24px;
+  height: 24px;
+  padding: 5px;
   color: var(--gold);
   background: #ffc7741c;
-  border-radius: 10px;
+  border-radius: 9px;
 }
 .permissions-panel > div {
   display: grid;
   gap: 4px;
 }
 .permissions-panel strong {
-  font-size: 0.76rem;
+  font-size: 0.68rem;
   line-height: 1.14;
+  white-space: nowrap;
 }
 .permissions-panel span {
   display: block;

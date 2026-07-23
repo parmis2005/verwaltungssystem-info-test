@@ -1285,8 +1285,8 @@ p {
   width: 54%;
 }
 .permissions-panel {
-  top: 70px;
-  right: 0;
+  top: 42px;
+  right: -2px;
   width: 184px;
   min-height: 78px;
   padding: 14px;

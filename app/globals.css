@@ -1285,27 +1285,32 @@ p {
   width: 54%;
 }
 .permissions-panel {
-  top: 42px;
-  right: -2px;
-  width: 184px;
-  min-height: 78px;
-  padding: 14px;
-  border-radius: 20px;
+  top: 14px;
+  right: 14px;
+  width: 148px;
+  min-height: 62px;
+  padding: 10px;
+  border-radius: 16px;
   display: grid;
-  grid-template-columns: 34px minmax(0, 1fr);
+  grid-template-columns: 28px minmax(0, 1fr);
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 .permissions-panel svg {
-  width: 34px;
-  height: 34px;
-  padding: 8px;
+  width: 28px;
+  height: 28px;
+  padding: 6px;
   color: var(--gold);
   background: #ffc7741c;
-  border-radius: 12px;
+  border-radius: 10px;
 }
 .permissions-panel strong {
-  font-size: 0.9rem;
+  font-size: 0.76rem;
+  line-height: 1.14;
+}
+.permissions-panel span {
+  font-size: 0.56rem;
+  line-height: 1.2;
 }
 .workflow-ribbon {
   left: 38px;

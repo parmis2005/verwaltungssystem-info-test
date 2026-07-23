@@ -1250,7 +1250,7 @@ p {
 }
 .document-stack {
   left: 0;
-  top: 320px;
+  bottom: 112px;
   width: 148px;
   min-height: 62px;
   padding: 10px;

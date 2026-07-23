@@ -1459,6 +1459,7 @@ p {
   grid-template-columns: minmax(0, 1320px);
 }
 .error-heading-section .section-heading h2 {
+  font-size: clamp(2.05rem, 3.15vw, 2.88rem);
   max-width: 1320px;
 }
 .left-heading-section .split-copy {

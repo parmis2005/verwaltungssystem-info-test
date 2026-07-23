@@ -226,28 +226,26 @@ export default function Page() {
             </h1>
           </div>
 
-          <div className="hero-focus-panel" aria-label="Verwaltungssystem Fokus">
-            <div className="focus-topbar">
-              <span />
-              <span />
-              <span />
-              <strong>System Leitfaden</strong>
-              <em>Analyse · Aufbau · Betreuung</em>
-            </div>
-
-            {[
-              ["01", "Analyse", "Abläufe und Engpässe sichtbar machen"],
-              ["02", "Umsetzung", "Module und Rechte gezielt aufbauen"],
-              ["03", "Betreuung", "Nutzung messen und weiterentwickeln"],
-            ].map(([step, title, text]) => (
-              <div className="focus-row" key={step}>
-                <span>{step}</span>
-                <div>
-                  <strong>{title}</strong>
-                  <small>{text}</small>
-                </div>
+          <div className="hero-system-panel" aria-label="Verwaltungssystem Nutzen">
+            <div className="system-panel-head">
+              <span><LayoutDashboard size={17} /></span>
+              <div>
+                <strong>Systemzentrale</strong>
+                <small>Daten, Rollen und Vorgänge an einem Ort</small>
               </div>
-            ))}
+            </div>
+            <div className="system-panel-grid">
+              {[
+                ["8", "Module verbunden"],
+                ["1", "Datenbasis"],
+                ["0", "verstreute Listen"],
+              ].map(([value, label]) => (
+                <div className="system-panel-tile" key={label}>
+                  <strong>{value}</strong>
+                  <span>{label}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
           <div className="hero-actions">
@@ -262,71 +260,64 @@ export default function Page() {
         </div>
 
         <div className="hero-visual" aria-hidden="true">
-          <div className="signal-stage">
-            <div className="seo-console">
-              <div className="console-topbar">
-                <span />
-                <span />
-                <span />
-                <strong>Verwaltungs-Fahrplan</strong>
+          <div className="signal-stage admin-stage">
+            <div className="admin-orbit">
+              <div className="orbit-ring orbit-ring-one" />
+              <div className="orbit-ring orbit-ring-two" />
+              <svg className="hub-links" viewBox="0 0 640 500" role="presentation" focusable="false">
+                <path d="M320 250L320 72" />
+                <path d="M320 250L542 174" />
+                <path d="M320 250L522 354" />
+                <path d="M320 250L120 356" />
+                <path d="M320 250L96 168" />
+              </svg>
+
+              <div className="hub-core">
+                <span><LayoutDashboard size={30} /></span>
+                <strong>Systemzentrale</strong>
+                <small>Jeder Vorgang fließt durch eine klare Struktur.</small>
               </div>
 
-              <div className="search-card">
-                <div className="search-pill">
-                  <LayoutDashboard size={16} />
-                  <span>kunden · dokumente · aufgaben · fristen</span>
+              {[
+                { Icon: UsersRound, title: "Kunden", detail: "Kontakte & Verlauf", className: "node-a" },
+                { Icon: Files, title: "Dokumente", detail: "Ablage & Versionen", className: "node-b" },
+                { Icon: CalendarDays, title: "Fristen", detail: "Termine & Erinnerungen", className: "node-c" },
+                { Icon: FileCheck2, title: "Freigaben", detail: "Status & Rechte", className: "node-d" },
+                { Icon: BarChart2, title: "Reporting", detail: "Zahlen & Engpässe", className: "node-e" },
+              ].map(({ Icon, title, detail, className }) => (
+                <div className={`module-node ${className}`} key={title}>
+                  <Icon size={20} />
+                  <div>
+                    <strong>{title}</strong>
+                    <span>{detail}</span>
+                  </div>
                 </div>
-                <div className="search-score">
-                  <span>Klarheit</span>
-                  <strong>94</strong>
-                </div>
-              </div>
+              ))}
+            </div>
 
-              <div className="serp-list">
-                <div className="serp-row active">
-                  <span>01</span>
-                  <div>
-                    <strong>Daten zentralisieren</strong>
-                    <small>Eine verlässliche Basis für Vorgänge schaffen</small>
-                  </div>
-                </div>
-                <div className="serp-row">
-                  <span>02</span>
-                  <div>
-                    <strong>Prozesse ordnen</strong>
-                    <small>Status, Rechte und Aufgaben sauber verbinden</small>
-                  </div>
-                </div>
-                <div className="serp-row">
-                  <span>03</span>
-                  <div>
-                    <strong>Auswertung ermöglichen</strong>
-                    <small>Engpässe und Fortschritt messbar machen</small>
-                  </div>
-                </div>
-              </div>
+            <div className="document-stack">
+              <span>Heute</span>
+              <strong>12 Vorgänge</strong>
+              <div />
+              <div />
+              <div />
+            </div>
 
-              <div className="growth-panel">
-                <div>
-                  <span>Routinearbeit</span>
-                  <strong>-38%</strong>
-                </div>
-                <svg viewBox="0 0 220 88" role="presentation" focusable="false">
-                  <path className="growth-grid-line" d="M0 64H220" />
-                  <path className="growth-grid-line" d="M0 34H220" />
-                  <path className="growth-area" d="M4 74 C42 72 52 54 86 56 C124 58 130 28 164 30 C190 31 198 18 216 14 V88 H4 Z" />
-                  <path className="growth-line" d="M4 74 C42 72 52 54 86 56 C124 58 130 28 164 30 C190 31 198 18 216 14" />
-                </svg>
+            <div className="permissions-panel">
+              <Lock size={17} />
+              <div>
+                <strong>Rollen & Rechte</strong>
+                <span>sauber getrennt</span>
               </div>
             </div>
 
-            <div className="floating-kpi kpi-one">
-              <span>Vorgänge</span>
-              <strong>zentral</strong>
-            </div>
-            <div className="floating-kpi kpi-two">
-              <span>Fristen</span>
-              <strong>im Blick</strong>
+            <div className="workflow-ribbon">
+              {["Anfrage", "Prüfung", "Freigabe", "Abschluss"].map((step, index) => (
+                <div className="ribbon-step" key={step}>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <strong>{step}</strong>
+                </div>
+              ))}
             </div>
           </div>
         </div>

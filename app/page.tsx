@@ -340,7 +340,7 @@ export default function Page() {
       <section id="angebot" className="section dark-band left-heading-section offer-section">
         <SectionHeading
           eyebrow="Unser Angebot"
-          title="Wir machen Verwaltungssysteme verständlich, planbar und umsetzbar."
+          title={"Wir machen Verwaltungssysteme\nverständlich, planbar\nund\u00a0umsetzbar."}
           text="Die Informationen auf dieser Seite zeigen, warum digitale Verwaltungssysteme sinnvoll sind und welche Bausteine dazugehören. Genau daraus entsteht unser Angebot: Wir analysieren, strukturieren, entwickeln und betreuen Systeme, die Verwaltungsarbeit spürbar ordnen."
         />
         <div className="service-grid four">

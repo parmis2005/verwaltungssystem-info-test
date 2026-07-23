@@ -1443,6 +1443,9 @@ p {
 .left-heading-section .split-copy {
   max-width: 760px;
 }
+.offer-section .section-heading {
+  grid-template-columns: minmax(0, 1040px);
+}
 .offer-section .section-heading h2 {
   max-width: 1040px;
 }
@@ -1453,10 +1456,10 @@ p {
   max-width: 1120px;
 }
 .error-heading-section .section-heading {
-  grid-template-columns: minmax(0, 1040px);
+  grid-template-columns: minmax(0, 1320px);
 }
 .error-heading-section .section-heading h2 {
-  max-width: 1040px;
+  max-width: 1320px;
 }
 .left-heading-section .split-copy {
   justify-self: start;
